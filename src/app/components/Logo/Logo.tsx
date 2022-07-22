@@ -37,7 +37,7 @@ export function Logo() {
   return (
     <LogoContainer>
       <Image>
-        <img src={CarLogoImg} />
+        <img src={CarLogoImg} alt="CarLogo" />
       </Image>
       <LogoText>Flux</LogoText>
     </LogoContainer>
