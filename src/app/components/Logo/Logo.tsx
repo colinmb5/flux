@@ -17,6 +17,8 @@ const LogoText = styled.div`
         md:text-2xl
         font-bold
         text-black
+        hover:text-red-500
+        cursor-pointer
         m-1
     `}
 `;

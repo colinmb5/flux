@@ -54,7 +54,7 @@ const Slogan = styled.h1`
         mb-4 
         sm:leading-snug
         lg:leading-normal
-        xl:leading-relaxed
+        xl:leading-snug
     `}
 `;
 
@@ -141,7 +141,7 @@ const StandaloneCar = styled.div`
 const ButtonContainer = styled.div`
   ${tw`
     flex
-    flex-wrap
+    flex-wrap 
     mt-4 
     `}
 `;
