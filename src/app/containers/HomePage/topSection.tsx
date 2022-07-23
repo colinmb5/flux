@@ -45,7 +45,8 @@ const Slogan = styled.h1`
   ${tw`
         font-bold
         text-2xl 
-        xl:text-6xl 
+        2xl:text-6xl
+        xl:text-5xl
         sm:text-3xl 
         md:text-5xl 
         lg:font-black
@@ -67,6 +68,7 @@ const Description = styled.p`
         overflow-hidden
         max-h-12 
         text-gray-800
+        w-11/12
     `}
 `;
 
@@ -150,7 +152,9 @@ export function TopSection() {
   return (
     <TopSectionContainer>
       <LeftContainer>
-        <Slogan>Rent The Best Quality Car's With Us</Slogan>
+        <Slogan>
+          Rent The Best Quality <br /> Car's With Us
+        </Slogan>
         <Description>
           Always choose the best car from out local stores or order it remotely
           at the best price for you and get the best quality cars for as long as
