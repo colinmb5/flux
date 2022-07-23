@@ -47,8 +47,8 @@ const Slogan = styled.h1`
         text-2xl 
         2xl:text-6xl
         xl:text-5xl
+        md:text-4xl
         sm:text-3xl 
-        md:text-5xl 
         lg:font-black
         md:font-extrabold
         text-black
@@ -77,7 +77,7 @@ const BlogContainer = styled.div`
   height: 10em;
   position: absolute;
   right: -5em;
-  top: -9em;
+  top: -7em;
   z-index: -1;
   transform: rotate(-30deg);
 
@@ -87,10 +87,18 @@ const BlogContainer = styled.div`
     max-height: max-content;
   }
 
-  @media (min-width: ${SCREENS.sm}) {
+  @media (min-width: 580px) {
+    width: 30em;
+    max-height: 10em;
+    right: -5em;
+    top: -13em;
+    transform: rotate(-25deg);
+  }
+
+  @media (min-width: ${SCREENS.md}) {
     width: 40em;
     max-height: 10em;
-    right: -9em;
+    right: -5em;
     top: -16em;
     transform: rotate(-25deg);
   }
@@ -114,7 +122,7 @@ const StandaloneCar = styled.div`
   width: auto;
   height: 10em;
   right: -6em;
-  top: -5em;
+  top: -2em;
   position: absolute;
 
   img {
@@ -122,14 +130,19 @@ const StandaloneCar = styled.div`
     height: 100%;
     max-width: fit-content;
   }
+  @media (min-width: 580px) {
+    height: 13.5em;
+    right: -6em;
+    top: -5rem;
+  }
 
-  @media (min-width: ${SCREENS.sm}) {
-    height: 16em;
+  @media (min-width: ${SCREENS.md}) {
+    height: 18em;
     right: -6em;
     top: -6em;
   }
   @media (min-width: ${SCREENS.lg}) {
-    height: 21em;
+    height: 23em;
     right: -8em;
     top: -5em;
   }

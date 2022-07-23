@@ -15,22 +15,23 @@ import { useState } from "react";
 import { SCREENS } from "../../helpers/responsive";
 
 const CardContainer = styled.div`
-  min-height: 4.3em;
   box-shadow: 0 1.3px 12px -3px rgba(0, 0, 0, 0.4);
   ${tw`
     flex
     justify-center
+    flex-col
     items-center
     rounded-md
     bg-white
-    pt-1 
-    pb-1 
-    pr-2 
-    pl-2 
-    md:pt-2 
-    md:pb-2 
-    md:pl-9 
-    md:pr-9 
+    pt-7 
+    pb-7 
+    pr-4 
+    pl-4 
+    sm:pt-2 
+    sm:pb-2 
+    sm:pl-9 
+    sm:pr-9
+    sm:flex-row
     `}
 `;
 
@@ -66,6 +67,8 @@ const Name = styled.span`
   ${tw`
     text-gray-600 
     text-xs
+    pb-4
+    sm:pb-0
     md:text-sm
     cursor-pointer
     pt-0.5
