@@ -1502,6 +1502,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@brainhubeu/react-carousel@npm:^2.0.4":
+  version: 2.0.4
+  resolution: "@brainhubeu/react-carousel@npm:2.0.4"
+  peerDependencies:
+    react: ^16.8.0
+    react-dom: ^16.8.0
+  checksum: b0ac621256ca243da8601443a5eda0fa01b698864ffae7444ddbfa52582a8847ea9058f897b153767123dc2fb1cfe255283f07773e6f255fc9520cce5f689913
+  languageName: node
+  linkType: hard
+
 "@csstools/normalize.css@npm:*":
   version: 12.0.0
   resolution: "@csstools/normalize.css@npm:12.0.0"
@@ -6409,6 +6419,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "flux@workspace:."
   dependencies:
+    "@brainhubeu/react-carousel": ^2.0.4
     "@fortawesome/fontawesome-svg-core": ^6.1.1
     "@fortawesome/free-regular-svg-icons": ^6.1.1
     "@fortawesome/free-solid-svg-icons": ^6.1.1
