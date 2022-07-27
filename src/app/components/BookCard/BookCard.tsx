@@ -8,7 +8,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Marginer } from "../../helpers/marginers";
-import { Button } from "../Button/Button";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import { useState } from "react";
@@ -88,6 +87,32 @@ const LineSeperator = styled.span`
     `}
 `;
 
+const Button = styled.button`
+  ${tw`
+    pl-5 
+    pr-5 
+    pt-3 
+    pb-3 
+    outline-none
+    rounded-md 
+    text-white
+    text-xs
+    font-semibold
+    border-transparent
+    border-2
+    border-solid
+    focus:outline-none
+    transition-all
+    duration-200
+    ease-in-out
+    m-1 
+    bg-red-500
+    hover:border-red-500 
+    hover:text-red-500
+    hover:bg-transparent
+  `}
+`;
+
 const DateCalendar = styled(Calendar)`
   position: absolute;
   max-width: none;
@@ -158,7 +183,7 @@ export function BookCard() {
         )}
       </ItemContainer>
       <Marginer direction="horizontal" margin="2em" />
-      <Button text="Book Your Ride" />
+      <Button>Book Your Ride</Button>
     </CardContainer>
   );
 }

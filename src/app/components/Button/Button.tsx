@@ -31,22 +31,22 @@ const BaseButton = styled.button`
 `;
 
 const OutlinedButton = styled(BaseButton)`
+  &:hover {
+    box-shadow: 2px 5px 5px #d54444;
+  }
   ${tw`
     bg-red-500
-    hover:bg-transparent
-    hover:text-red-500
-    hover:border-red-500
  `}
 `;
 
 const FilledButton = styled(BaseButton)`
+  &:hover {
+    box-shadow: 2px 5px 5px #d54444;
+  }
   ${tw`
     border-red-500 
     text-red-500
     bg-transparent
-    hover:bg-red-500 
-    hover:text-white
-    hover:border-transparent
  `}
 `;
 

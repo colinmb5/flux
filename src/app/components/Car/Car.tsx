@@ -98,7 +98,8 @@ const CarDetailsContainer = styled.div`
   ${tw`
         flex
         w-full
-        justify-between
+        justify-center
+        ml-7
     `}
 `;
 
@@ -106,6 +107,7 @@ const CarDetail = styled.span`
   ${tw`
         flex
         items-center
+        mr-7
     `}
 `;
 
