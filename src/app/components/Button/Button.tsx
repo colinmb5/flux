@@ -32,7 +32,7 @@ const BaseButton = styled.button`
 
 const OutlinedButton = styled(BaseButton)`
   &:hover {
-    box-shadow: 2px 5px 5px #d54444;
+    box-shadow: 2px 5px 5px #cea0a0;
   }
   ${tw`
     bg-red-500
@@ -41,7 +41,7 @@ const OutlinedButton = styled(BaseButton)`
 
 const FilledButton = styled(BaseButton)`
   &:hover {
-    box-shadow: 2px 5px 5px #d54444;
+    box-shadow: 2px 5px 5px #cea0a0;
   }
   ${tw`
     border-red-500 
