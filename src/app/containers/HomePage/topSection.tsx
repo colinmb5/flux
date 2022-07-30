@@ -8,13 +8,16 @@ import BlobImg from "../../../assets/images/blob.svg";
 import { SCREENS } from "../../helpers/responsive";
 
 const TopSectionContainer = styled.div`
-  min-height: 400px;
-  margin-top: 6em;
+  /* min-height: 350px; */
   ${tw`
         w-full
         max-w-screen-2xl 
         flex
         justify-between
+        min-h-[350px]
+        sm:min-h-[400px]
+        mt-10
+        sm:mt-24
         pl-3 
         pr-3 
         lg:pl-12 
