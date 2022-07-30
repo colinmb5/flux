@@ -37,3 +37,18 @@
     transform: translateY(0px);
   }
 }
+
+@media screen and (max-width: 639px) {
+  .swiper-pagination {
+    bottom: 40px !important;
+  }
+}
+@media screen and (min-width: 640px) {
+  .swiper-pagination {
+    bottom: 20px !important;
+  }
+}
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}

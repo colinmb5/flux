@@ -3,15 +3,19 @@ import styled from "styled-components";
 import tw from "twin.macro";
 import { ICar } from "../../interfaces/iCar";
 import { Car } from "../../components/Car/Car";
-import Carousel, { Dots, slidesToShowPlugin } from "@brainhubeu/react-carousel";
-import "@brainhubeu/react-carousel/lib/style.css";
 import { useMediaQuery } from "react-responsive";
 import { SCREENS } from "../../helpers/responsive";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper";
 
 const TopCarsContainer = styled.div`
+  user-select: none;
   ${tw`
         max-w-screen-lg
         w-full
+        min-h-[600px]
         flex
         flex-col
         items-center
@@ -41,6 +45,7 @@ const CarsContainer = styled.div`
         justify-center
         mt-7 
         md:mt-10 
+        min-h-[500px]
     `}
 `;
 
@@ -70,59 +75,49 @@ export function TopCars() {
     gas: "Gas",
   };
 
-  const cars = [
-    <Car {...testCar2} />,
-    <Car {...testCar} />,
-    <Car {...testCar2} />,
-    <Car {...testCar} />,
-    <Car {...testCar2} />,
-  ];
-
-  const numberOfDots = isMobile ? cars.length : Math.ceil(cars.length / 3);
-
   return (
     <TopCarsContainer>
       <Title>Explore Our Top Deals</Title>
       <CarsContainer>
-        <Carousel
-          value={current}
-          onChange={setCurrent}
-          slides={cars}
-          plugins={[
-            "clickToChange",
-            {
-              resolve: slidesToShowPlugin,
-              options: {
-                numberOfSlides: 3,
-              },
-            },
-          ]}
+        <Swiper
+          slidesPerView={3}
+          spaceBetween={30}
+          pagination={{
+            clickable: true,
+          }}
           breakpoints={{
-            640: {
-              plugins: [
-                "clickToChange",
-                {
-                  resolve: slidesToShowPlugin,
-                  options: {
-                    numberOfSlides: 1,
-                  },
-                },
-              ],
-            },
             900: {
-              plugins: [
-                "clickToChange",
-                {
-                  resolve: slidesToShowPlugin,
-                  options: {
-                    numberOfSlides: 2,
-                  },
-                },
-              ],
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 20,
             },
           }}
-        />
-        <Dots value={current} onChange={setCurrent} number={numberOfDots} />
+          modules={[Pagination]}
+          className="mySwiper"
+        >
+          <SwiperSlide>
+            <Car {...testCar2} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Car {...testCar} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Car {...testCar2} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Car {...testCar} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Car {...testCar} />
+          </SwiperSlide>
+        </Swiper>
       </CarsContainer>
     </TopCarsContainer>
   );
