@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
-import { Logo } from "../Logo/Logo";
+import { Logo } from "../../components/Logo/Logo";
 
 const FooterContainer = styled.div`
   /* min-height: 24em; */

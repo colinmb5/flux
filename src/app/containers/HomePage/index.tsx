@@ -8,7 +8,7 @@ import { BookingSteps } from "./bookingSteps";
 import { Marginer } from "../../helpers/marginers";
 import { AboutUs } from "./aboutus";
 import { TopCars } from "./topCars";
-import { Footer } from "../../components/Footer/Footer";
+import { Footer } from "../HomePage/Footer";
 
 const PageContainer = styled.div`
   ${tw`
